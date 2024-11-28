@@ -1,0 +1,210 @@
+%%%%========== TIPO DE DOCUMENTO ==========%%%%
+\documentclass[letterpaper]{article}
+
+%%%%========== IMPORTAMOS LAS PAQUETERIAS ==========%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{anysize}
+\usepackage{multicol} 
+\usepackage{graphicx}                      
+\usepackage{blindtext}                                          
+\usepackage{cancel}
+\usepackage{tikz}
+
+\usepackage{hyperref}
+ \hypersetup{ colorlinks = true, linkcolor = black } %==== Hipervínculos ====%
+\usepackage{geometry}
+\newgeometry{ bottom = 2.54cm, top = 2.54cm, left = 2.54cm, right = 2.54cm } %==== Modificación de Márgenes ====%
+
+\usepackage{fancyhdr}  
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Mecánica Clásica}
+\fancyhead[L]{\thepage}
+\renewcommand{\headrulewidth}{0.08pt} %==== Encabezados ====%
+
+\renewcommand{\footrulewidth}{0.08pt} %==== Pie de Página ====%
+\fancyfoot[L]{}
+\fancyfoot[R]{\rightmark}
+
+%\usepackage[pages=all]{background} 
+%\backgroundsetup{ scale=1, color=black, opacity=0.15, angle=0,
+ %   contents={ \includegraphics{logo_ifuap.png} }
+%}
+
+\setcounter{tocdepth}{3}
+
+\newcommand{\Title}[1]{\begin{center} \LARGE{\textbf{\textit{#1}}} \end{center}}
+\newcommand{\Abstract}[1]{\begin{abstract} \normalsize{#1} \end{abstract}}
+\newcommand{\Theorem}[1]{\begin{center} \normalsize{\textit{#1}} \end{center}}
+
+\newcommand{\blue}  { \color{blue} }
+\newcommand{\red}   { \color{red} }
+\newcommand{\green} { \color{OliveGreen} }
+\newcommand{\orange}{ \color{orange} }
+
+\newcommand{\deq}{:=}
+\newcommand{\less}{<}
+\newcommand{\grow}{>}
+
+\newcommand{\Identity}{\mathbb{I}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Naturals}{\mathbb{N}}
+\newcommand{\Integers}{\mathbb{Z}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Imaginaries}{\mathbb{I}}
+
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Ham}{\mathcal{H}}
+
+\newcommand{\cbk}[1]{ \left( #1 \right) }
+\newcommand{\sbk}[1]{ \left[ #1 \right] }
+\newcommand{\kbk}[1]{ \left\{ #1 \right\} }
+\newcommand{\tbk}[1]{ \langle #1 \rangle }
+
+\newcommand{\Grad}{ \vec{\nabla} }
+\newcommand{\Divg}{ \vec{\nabla} \cdot }
+\newcommand{\Curl}{ \vec{\nabla} \times }
+\newcommand{\Lapl}{ \nabla^{2} }
+
+\newcommand{\rad}[1]{ \vec{r}_{#1} }
+
+\newcommand{\define}[3]{ \left. #1 \right|_{#2}^{#3} }
+\newcommand{\Sum}[3]{ \sum_{#1=#2}^{#3} }
+\newcommand{\Tensor}[3]{ #1^{#2}_{#3} }
+
+\newcommand{\Partial}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\SecPartial}[3]{ \frac{\partial^{2}#1}{\partial#2\partial#3} }
+
+\newcommand{\eqLagrange}[1]{ \frac{d}{dt}\cbk{\Partial[\dot{#1}]{\Lag}} - \Partial[#1]{\Lag} = 0 }
+
+\newcommand{\eqHamilton}[2]{ \Partial[#1_{i}]{\Ham} = - \dot{#2}_{i}, ~ ~ \Partial[#2_{i}]{\Ham} = \dot{#1}_{i} }
+
+\begin{document}
+    \section{Modelo}{
+
+        \subsection{Descripción del Entorno Biológico.}
+        
+        
+        \normalsize{Consideremos un organismo que tiene que proporcionan energía (tales recursos se denominan sustituibles). Sean $S_1$ y $S_2$ las concentraciones de estos dos recursos contenidos en un quimiostato. Entonces el vector:}\\
+        
+        \begin{equation}
+        I=\binom{S_{1}}{S_{2}},
+        \end{equation}
+
+        \normalsize{constituye la condición ambiental [7,8].}\\
+
+        \normalsize{Los organismos pueden caracterizarse por diversos grados de consumir. Describimos estos rasgos por x y varían continuamente entre 0 y 1. Si el rasgo toma el valor 0, sólo se consume el recurso $S_2$ y cuando el rasgo toma el valor de 1 solo se consume el recurso $S_1$. El efecto general en el cual contribuyen los dos rasgos se describe a partir de los coeficientes $\eta(x)$  y $\xi(x)$, en el cual la cantidad promedio que consume un organismo con el rasgo x para los recursos 1 y 2 viene dado como:  $\eta(x)$ $S_1$ y $\xi(x)$ $S_2$ respectivamente.}\\
+
+        \normalsize{En el caso de una población consumidora monomórfica, la dinámica ecológica está gobernada por el siguiente sistema de ecuaciones diferenciales:}\\
+
+        \begin{equation}
+        \begin{split}
+             \frac{d S_1}{dx}&=S_{01}-S_1-\eta(x)S_1X\\  \frac{d S_2}{dx}&=S_{02}-S_2-\xi(x)S_2X\\ \frac{d S_1}{dx}&=-X+\eta(x)S_1X-\xi(x)S_2X 
+        \end{split}
+        \end{equation}
+
+        \normalsize{Donde X representa la densidad de la población consumidora y $S_{01}$ es la concentración del recurso i en el medio de entrada.
+        El sistema ecuaciones (2) tiene siempre que cumplir:}\\
+
+        \begin{equation}
+            \eta(x)S_1X-\xi(x)S_2X>1,
+        \end{equation}
+
+        \normalsize{y la tasa de crecimiento poblacional de los consumidores con el rasgo X, bajo condiciones ambientales constantes I, está dada por:}\\
+
+        \begin{equation}
+            r(x,I)=-1+\eta(x)S_1X+\xi(x)S_2X.
+        \end{equation}
+
+        \normalsize{Ahora, el análogo de (2) para la competencia de dos poblaciones consumidoras, una con el rasgo x y la otra con el rasgo y, está dado por el siguiente sistema:}\\
+
+        \begin{equation}
+        \begin{split}
+            \frac{d S_1}{dt}&=S_{01}-S_1-\eta(x)S_1X_1-\eta(y)S_1X_2\\  \frac{d S_2}{dt}&=S_{02}-S_2-\xi(x)S_2X_1-\xi(y)S_2X_2\\ \frac{d X_1}{dx}&=-X_1+\eta(x)S_1X_1+\xi(x)S_2X_1\\
+            \frac{d X_2}{dx}&=-X_2+\eta(y)S_1X_2+\xi(y)S_2X_1
+        \end{split}
+        \end{equation}
+
+        \normalsize{En el estado estacionario, tanto como r(x,I) y r(y,I) son iguales a cero. Estas son dos ecuaciones lineales con dos incógnitas, $S_1$ y $S_2$. La solución se expresa como:}\\
+
+        \begin{equation}
+            \binom{S_1}{S_2}=\frac{1}{\eta(x)\xi(y)-\eta(y)\xi(x)}\binom{\xi(y)-\xi(x)}{\eta(y)-\eta(x)}
+        \end{equation}
+
+        
+        \normalsize{A continuación, las dos relaciones de retroalimentación pueden utilizarse para deducir que las densidades en estado estacionario de las dos poblaciones consumidoras son:}\\
+
+        \begin{equation}
+            \binom{X_1}{X_2}=\frac{1}{\eta(x)\xi(y)-\eta(y)\xi(x)}\binom{\frac{\xi(y)S_{01}}{\xi(y)-\xi(x)}-\frac{\eta(y)S_{02}}{\eta(x)-\eta(y)}-\frac{\eta(y)-\xi(y)}{\eta(x)\xi(y)-\eta(y)\xi(x)}}{\frac{-\xi(x)S_{01}}{\xi(y)-\xi(x)}-\frac{\eta(x)S_{02}}{\eta(x)-\eta(y)}-\frac{\xi(x)-\eta(x)}{\eta(x)\xi(y)-\eta(y)\xi(x)}}
+        \end{equation}
+
+        \normalsize{De acuerdo con el Principio de Exclusión Competitiva, tres o más poblaciones consumidoras no pueden coexistir en estado estacionario utilizando solo dos recursos. De hecho, si r(x,I), r(y,I) y r(z,I) se igualan a cero, obtendremos tres ecuaciones lineales con solo dos incógnitas, lo que implica que, en general, no existe solución.}\\
+
+
+        
+        \subsection{Sistemas de Ecuaciones de Selección-Mutación y Paso al Límite para Mutaciones.}
+
+        \normalsize{Si la reproducción no es completamente fiel, un consumidor con el rasgo yyy puede generar descendencia con el rasgo x. Sea K(x,y) la densidad de probabilidad correspondiente. En ese caso, se espera encontrar, con el tiempo, consumidores con todos los rasgos posibles. Sea n(t,.) la densidad de consumidores en el tiempo t. El sistema queda descrito por:}
+
+        \begin{equation}
+            \begin{split}
+                \frac{d S_1(t,x)}{dt}&=S_{01}-S_1(t)+S_1(t)\int_{0}^{1}\eta(y)n(t,x)dx\\
+               \frac{d S_1(t,x)}{dt}&=S_{02}-S_2(t)+S_2(t)\int_{0}^{1}\xi(x)n(t,x)dx\\
+              \frac{d n(t,x)}{dt}&=-n(t,x)+\int_{0}^{1}K(x,y)[S_1(t)\eta(y)+S_2(t)\xi(x)]n(t,y)dy,
+            \end{split}
+        \end{equation}
+
+        \normalsize{describe la interacción, a través de los recursos, de los diversos tipos de consumidores, así como el efecto de la mutación. Por lo tanto, se le denomina ecuación de selección-mutación (o sistema de ecuaciones). Por simplicidad, en la situación en la que la descendencia de un individuo con el rasgo x tiene una distribución de rasgos descrita por la densidad K(x,.).}\\
+
+        \normalsize{Ahora, sea K(x,y) dependiente de un pequeño parámetro $\epsilon$; la idea es que las mutaciones son necesariamente pequeñas, lo cual incorporamos asumiendo que $K_\epsilon$ es insignificantemente pequeño para x fuera de un vecindario de radio $\epsilon$ alrededor de y [9].}\\
+
+        \normalsize{Reescalamos el tiempo sustituyendo $\tau=\epsilon$t (este escalamiento ajusta la escala temporal de modo que, al hacer $\epsilon$ desaparecer, la escala de tiempo se adapte para observar el efecto de las mutaciones). Al escribir nuevamente t como $\tau$, ahora podemos reescribir la última ecuación de (4) como:}\\
+
+        \begin{equation}
+            \frac{\epsilon}{n(t,x)}\frac{d n(t,x)}{dt}=-1+\int_{0}^{1}K(x,y)[S_1(t)\eta(y)+S_2(t)\xi(x)]\frac{n(y,t)}{n(t,x)}dy.
+        \end{equation}
+
+        \normalsize{podemos luego realizar la siguiente transformación}\\
+
+        \begin{equation}
+            \varphi(t,x)=\epsilon ln[n(t,x)],
+        \end{equation}
+
+        \normalsize{mientras que el segundo término en el lado derecho puede escribirse como:}\\
+
+        \begin{equation}
+            \int_{0}^{1}K_{\epsilon}(x,y)[S_1(t)\eta(y)+S_2(t)\xi(x)]e^{\frac{\varphi(t,y)-\varphi(t,x)}{\epsilon}}dy
+        \end{equation}
+
+        \normalsize{Ahora supongamos que $K_{\epsilon}$ (x,y) es lo suficientemente pequeño para la variable y fuera de un vecindario de radio $\epsilon$ alrededor de x. Luego, realizamos el cambio de variable de integración y=x+$\epsilon$z y aproximamos:}\\
+
+        \begin{equation}
+            \frac{\varphi(t,y)-\varphi(t,x)}{\epsilon} \to \frac{d\varphi(t,x) }{dx}z
+        \end{equation}
+
+        \normalsize{Además, asumimos que la probabilidad de aparición de un nuevo rasgo como resultado de una mutación depende únicamente de la distancia al rasgo original. Por lo tanto, reemplazamos el kernel $K_{\epsilon}$ por un kernel de convolución $\widetilde{K}$ y aproximamos:}\\
+
+        \begin{equation}
+            K_{\epsilon}(x,y)dy\longrightarrow \widetilde{K}(z)dz
+        \end{equation}
+
+        \normalsize{Donde $\widetilde{K}$ es una función no negativa y par definida,cuya integral es igual a 1. Al tomar formalmente el límite cuando $\epsilon$ tiende a 0 en (9), obtenemos:}\\
+
+        \begin{equation}
+            \frac{d\varphi(t,x) }{dx}=-r(x,I)+[S_1(t)\eta(y)+S_2(t)\xi(x)]H(\frac{\partial \varphi(t,x) }{\partial x})
+        \end{equation}
+            
+
+        \normalsize{donde r se define como en (4) y H se define por:}
+        \begin{equation}
+             H(p)=\int_{-\infty}^{\infty}\widetilde{K}(z)e^{-pz}dz-1
+        \end{equation}
+
+        \normalsize{Note que H(0)=0 y que, para una función par $\widetilde{K}$,se tiene $H'(0)>0$; por lo tanto,H es convexa. Llamamos a H el Hamiltoniano correspondiente a $\widetilde{K}$.}
+
+\end{document}
