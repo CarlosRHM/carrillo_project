@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+
+\bibitem{adaptacion}
+Osteicoechea{,} Alí.
+\newblock Definición de adaptación, 25 de abril de 2024.
+
+\bibitem{evolucion}
+Bioenciclopedia.
+\newblock La evolución, 2022.
+
+\bibitem{evans}
+Evans{,}~Lawrence C.
+\newblock {\em Partial differential equations}, volume~19.
+\newblock American Mathematical Society, 2022.
+
+\bibitem{calvez2020}
+Vincent Calvez and King-Yeung Lam.
+\newblock Uniqueness of the viscosity solution of a constrained
+  hamilton–jacobi equation.
+\newblock {\em Calculus of Variations and Partial Differential Equations},
+  59(163), 2020.
+
+\bibitem{diekman2003}
+O.~Diekmann, M.~Gyllenberg, and J.A.J. Metz.
+\newblock Steady-state analysis of structured population models.
+\newblock {\em Theoretical Population Biology}, 63(4):309--338, 2003.
+
+\bibitem{dieckman2005}
+Odo Diekmann, Pierre-Emanuel Jabin, Stéphane Mischler, and Benoıˆt Perthame.
+\newblock The dynamics of adaptation: An illuminating example and a
+  hamilton–jacobi approach.
+\newblock {\em Theoretical Population Biology}, 67(4):257--271, 2005.
+
+\bibitem{Barles2006}
+Barles{,} G. and Perthame{,} B.
+\newblock Concentrations and constrained hamilton-jacobi equations arising in
+  adaptive dynamics.
+\newblock {\em Contemporary Mathematics}, 439:57--68, 2006.
+
+\bibitem{metz96}
+Metz{,} J.~A. J., Geritz{,} S.~A. H., Meszena{,} G., Jacobs{,} F.~J. A., and
+  Heerwaarden{,} J.~S. van.
+\newblock Adaptive dynamics: A geometrical study of the consequences of nearly
+  faithful reproduction.
+\newblock Iiasa working paper, IIASA, Laxenburg, Austria, September 1995.
+
+\bibitem{chemostat}
+Boran Kartal.
+\newblock Che­mo­stat.
+\newblock Accessed: 2024-11-21.
+
+\bibitem{Nicolas}
+Champagnat{,} N., Ferriere{,} R., and Ben~Arous{,} G.
+\newblock The canonical equation of adaptive dynamics: a mathematical view.
+\newblock {\em Selection}, 2:71--81, 2001.
+
+\bibitem{Diekmann2001}
+Diekmann{,} O., Gyllenberg{,} M., Huang{,} H., Kirkilionis{,} M., Metz{,} J.~A.
+  J., and Thieme{,}~H. R.
+\newblock On the formulation and analysis of general deterministic structured
+  population modelsii. nonlinear theory.
+\newblock {\em Journal of Mathematical Biology}, 43(2):157--189, Aug 2001.
+
+\bibitem{Mirrahimi}
+Mirrahimi{,} S., Perthame{,} B., Bouin{,} E., and Millien{,} P.
+\newblock Population formulation of adaptative meso-evolution: theory and
+  numerics.
+\newblock {\em The mathematics of Darwin’s legacy}, pages 159--174, 2011.
+
+\bibitem{Dieckmann1996}
+Dieckmann{,} Ulf and Law{,} Richard.
+\newblock The dynamical theory of coevolution: a derivation from stochastic
+  ecological processes.
+\newblock {\em Journal of Mathematical Biology}, 34(5):579--612, May 1996.
+
+\end{thebibliography}

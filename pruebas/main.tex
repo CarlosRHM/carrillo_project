@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{anysize}
+\usepackage{multicol} 
+\usepackage{graphicx}                      
+\usepackage{blindtext}                                          
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage[square,numbers]{natbib}
+
+\usepackage{hyperref}
+ \hypersetup{ colorlinks = true, linkcolor = black } %==== Hipervínculos ====%
+\usepackage{geometry}
+\newgeometry{ bottom = 2.54cm, top = 2.54cm, left = 2.54cm, right = 2.54cm } %==== Modificación de Márgenes ====%
+
+\usepackage{fancyhdr}  
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Mecánica Clásica}
+\fancyhead[L]{\thepage}
+\renewcommand{\headrulewidth}{0.08pt} %==== Encabezados ====%
+
+\renewcommand{\footrulewidth}{0.08pt} %==== Pie de Página ====%
+\fancyfoot[L]{}
+\fancyfoot[R]{\rightmark}
+
+%\usepackage[pages=all]{background} 
+%\backgroundsetup{ scale=1, color=black, opacity=0.15, angle=0,
+ %   contents={ \includegraphics{logo_ifuap.png} }
+%}
+
+\setcounter{tocdepth}{3}
+
+\newcommand{\Title}[1]{\begin{center} \LARGE{\textbf{\textit{#1}}} \end{center}}
+\newcommand{\Abstract}[1]{\begin{abstract} \normalsize{#1} \end{abstract}}
+\newcommand{\Theorem}[1]{\begin{center} \normalsize{\textit{#1}} \end{center}}
+
+\newcommand{\blue}  { \color{blue} }
+\newcommand{\red}   { \color{red} }
+\newcommand{\green} { \color{OliveGreen} }
+\newcommand{\orange}{ \color{orange} }
+
+\newcommand{\deq}{:=}
+\newcommand{\less}{<}
+\newcommand{\grow}{>}
+
+\newcommand{\Identity}{\mathbb{I}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Naturals}{\mathbb{N}}
+\newcommand{\Integers}{\mathbb{Z}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Imaginaries}{\mathbb{I}}
+
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Ham}{\mathcal{H}}
+
+\newcommand{\cbk}[1]{ \left( #1 \right) }
+\newcommand{\sbk}[1]{ \left[ #1 \right] }
+\newcommand{\kbk}[1]{ \left\{ #1 \right\} }
+\newcommand{\tbk}[1]{ \langle #1 \rangle }
+
+\newcommand{\Grad}{ \vec{\nabla} }
+\newcommand{\Divg}{ \vec{\nabla} \cdot }
+\newcommand{\Curl}{ \vec{\nabla} \times }
+\newcommand{\Lapl}{ \nabla^{2} }
+
+\newcommand{\rad}[1]{ \vec{r}_{#1} }
+
+\newcommand{\define}[3]{ \left. #1 \right|_{#2}^{#3} }
+\newcommand{\Sum}[3]{ \sum_{#1=#2}^{#3} }
+\newcommand{\Tensor}[3]{ #1^{#2}_{#3} }
+
+\newcommand{\Partial}[2]{ \frac{\partial#1}{\partial#2} }
+\newcommand{\SecPartial}[3]{ \frac{\partial^{2}#1}{\partial#2\partial#3} }
+
+\newcommand{\eqLagrange}[1]{ \frac{d}{dt}\cbk{\Partial[\dot{#1}]{\Lag}} - \Partial[#1]{\Lag} = 0 }
+
+\newcommand{\eqHamilton}[2]{ \Partial[#1_{i}]{\Ham} = - \dot{#2}_{i}, ~ ~ \Partial[#2_{i}]{\Ham} = \dot{#1}_{i} }
+
+\begin{document}
+
+	\Title{Evoluci\'on de un rasgo cuantitativo en una poblaci\'on monom\'orfica, enfoque con formalismo de Hamilton-Jacobi.}
+
+	\Abstract{Reproducimos parte de los resultados expuestos en el articulo \citep{dieckman2005}, enfoc\'andonos en la evoluci\'on de un rasgo cuantitativo de una poblaci\'on monom\'orfica, y obteniendo resultados con un nuevo enfoque sobre las ecuaciones de selecci\'on-mutaci\'on utilizadas, en este caso con el formalismo de Hamilton-Jacobi.}
+	\tableofcontents
+	\clearpage
+%-----------------------------------------------------------------
+	\input{Adaptacion}
+%-----------------------------------------------------------------
+	\section{Conceptos Preliminares}{
+		\subsection{\textit{Chemostat}}{
+			\normalsize{El \textit{chemostat} o \textit{quimistato} es un dispositivo de laboratorio que está diseñado para el estudio del crecimiento de microorganismos en un ambiente controlado, en un medio líquido. Este dispositivo funciona de la siguiente forma: a un recipiente de vidrio cerrado, de entre 1 mL y unos pocos litros, se le suministra un medio fresco a través de una bomba de afluente. Para mantener un volumen constante, una segunda bomba extrae el líquido a la misma velocidad. Los microorganismos que han sido añadidos al recipiente únicamente pueden alimentarse del la bomba de afluente, y la tasa de crecimiento de esta está definida como la relación entre la tasa de afluente y el volumen del recipiente. Entre los sustratos y factores de crecimiento añadidos al medio, uno es el llamado sustrato de control, que limita el crecimiento \citep{chemostat}.}
+
+            \begin{center}
+                \includegraphics[scale=0.2]{Chemostat.jpg}
+            \end{center}
+
+            \normalsize{Algunas de las utilidades del quimiostato son que puede ser utilizado en cultivos puros para el estudio de la cinética del crecimiento microbiano, o para enfoques ómicos más detallados. También se puede utilizar para experimentos de competición \citep{chemostat}.}\\
+            
+            \normalsize{En estos experimentos se liberan en el recipiente dos o tres microorganismos diferentes, con nichos comparables en condiciones variables; con tasas de crecimiento altas o bajas; con concentraciones de oxígeno altas o bajas; distintos valores de pH o temperatura; con o sin factores de crecimiento, etc \citep{chemostat}.}
+
+			\input{HJ}
+    }
+%-----------------------------------------------------------------
+	\section{Modelo}{
+		\input{Modelo}   
+		\subsection{Descripción Superficial del Modelo Numérico.}
+   \input{metodo_numerico}
+	}
+%-----------------------------------------------------------------
+	\section{Conclusiones y Comentarios Finales}
+	\clearpage
+%---------------------------------------------------------------
+	\bibliographystyle{plain}
+	\bibliography{referencias.bib}
+%------------------------------------------------
+\end{document}
