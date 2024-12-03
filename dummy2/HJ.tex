@@ -1,0 +1,92 @@
+\subsection{Ecuación de Hamilton-Jacobi.}
+Desarrollamos la idea principal detr\'as de la ecuaci\'on con al que trabajaremo:\\
+Sea una ecuaci\'on parcial diferencial no lineal \citep{evans} de la forma:
+\begin{equation}\label{og}
+	F(x;u,\nabla u)=0
+\end{equation}
+con $x\in\Omega\subseteq\Reals^n$, si renombramos $p\doteq\nabla u$ notaci\'on vectorial, asumimos que $F=F(x,u,p)$ es una funci\'on continua $F:\Reals^n$x$\Reals$x$\Reals^n \to \Reals$.\\
+Dado $u(x)=\overline{u}(x)$ con $x\in\partial\Omega$ se construye una soluci\'on (al menos localmente, en la vecindad de la frontera) por el m\'etodo de caracter\'izticas.
+Fijando un punto $x\in\partial\Omega$ consid\'erese una curva parametrizada por $t:x(t)$ con $x(0)=y$, y con:
+\begin{equation*}
+	\begin{split}
+		u(t)&\doteq=u(x(t))\\
+		p(t)&\doteq p(x(s))=\nabla u(x(t))
+	\end{split}
+\end{equation*}
+Denotando por un punto la derivada con respecto a $t$ tenemos:
+\begin{equation}\label{casi}
+	\begin{split}
+		\dot{u}&=\sum_i \frac{\partial u}{\partial x_i}\dot x_i=\sum_i p_i \dot x_i\\
+		\dot p_j&=\sum_i \frac{\partial^2 u}{\partial x_i\partial x_j} \dot x_i
+	\end{split}
+\end{equation}
+
+Diferenciando \eqref{og} con respecto a $x_j$:
+
+\begin{equation*}
+	\begin{split}
+		\frac{\partial F}{\partial x_j}+\frac{\partial F}{\partial u}\frac{\partial u}{\partial x_j}+\sum_i \frac{\partial F}{\partial p_i}\frac{\partial^2 u}{\partial x_i\partial x_j}&=0\\
+		-\frac{\partial F}{\partial x_j}-\frac{\partial F}{\partial u}p_j&=\sum_i \frac{\partial F}{\partial p_i}\frac{\partial^2 u}{\partial x_j\partial x_i}
+	\end{split}
+\end{equation*}
+
+Al usar \eqref{casi} renombramos $\dot x_i=\frac{\partial F}{\partial p_i}$ obtenemos entonces:
+\begin{equation*}
+	\begin{split}
+			\dot x_i&=\frac{\partial F}{\partial p_i}\\
+			\dot{u}&=\sum_i p_i\frac{\partial F}{\partial p_i}\\
+			\dot p_j&=-\frac{\partial F}{\partial x_j}-\frac{\partial F}{\partial u}p_j
+	\end{split}
+\end{equation*}
+Que ahora, para un tipo espec\'ifico de problema supongamos que $F$ no depende explicitamente de $u$, entonces recuperamos las ecuaciones can\'onicas de Hamilton y podemos escribir $F\to\Ham$, y en notaci\'on vectorial.
+
+\begin{equation*}
+	\begin{split}
+			\dot x&=\frac{\partial \Ham}{\partial p}\\
+			\dot{u}&=p\cdot \frac{\partial \Ham}{\partial p}\\
+			\dot p&=-\frac{\partial \Ham}{\partial x}
+	\end{split}
+\end{equation*}
+con $x(0)=y$, $u(0)=u(y)$ y $p(0)=\nabla u(y)$.
+De esta forma, podemos aplicar el formalismo de Hamilton-Jacobi a una variedad de problemas no necesariamente mec\'anicos, solamente pidiendo que la ecuaci\'on original cumpla $F=F(t;x,\nabla u)$.
+ \subsection{Motivación para Introducir la Teoría de Hamilton-Jacobi.}
+ 
+ En el estudio de modelos de poblaciones a trav\'es de fenotipos, ecuaciones del tipo Hamoltin-Jacobi aparecen, en especial, ecuaciones del tipo:
+            \begin{equation*}
+            \left\{ 
+  \begin{array}{ c l }
+    \frac{\partial u}{\partial t}(t,x)+b(x,I(t))\Ham (\nabla u(t,x))+R(t,x,I(t))=0 & x\in\Reals^d,t>0\\
+                \min_{x\in\Reals^d} u(t,x)=0&t\geq0,
+  \end{array}
+\right.
+            \end{equation*}
+
+            \normalsize{\citep{Barles2006} Ecuaciones de Hamilton-Jacobi con constricciones aparecen en el estudio diversas asintósitcas singulares, es decir, situaciones en las que el comportamiento de un sistema físico o matemático cambia  de manera abrupta o presenta características extremas en ciertas condiciones, como cerca de puntos críticos, bordes o zonas donde se manifiestan discontinuidades. Estas presentan soluciones límite o aproximadas en condiciones extremas.
+            }\\
+
+            \normalsize{En los sistemas ecológicos y biológicos, la adaptación y evolución son procesos fundamentales que determinan la dinámica y supervivencia de las poblaciones. La capacidad de las especies para adaptarse a cambios en su entorno a través de la selección natural, la mutación y la competencia es un tema central en biología teórica. Para modelar estos procesos, las ecuaciones de Hamilton-Jacobi (H-J) han emergido como herramientas matemáticas poderosas para describir la evolución de poblaciones bajo distintos escenarios ecológicos.}\\
+
+            \normalsize{\citep{Nicolas} La ecuación de Hamilton-Jacobi encuentra su aplicación en sistemas donde la dinámica de selección-mutación desempeña un papel clave. En este contexto, el cambio en el tiempo del valor de una cierta característica $\hat{s}$ en una población monomórfica, se da por medio de una ecuación de selección-mutación:}
+
+            \begin{equation*}
+                \frac{d \hat{s}}{d t}=\mu(\hat{s}) \frac{\sigma_0^2(\hat{s})}{2} n(\hat{s}) \partial_1 f(\hat{s}, \hat{s})
+            \end{equation*}
+
+            \normalsize{donde $\mu(s)$ es la probabilidad de que un nacimiento de un individuo con una característica $\hat{s}$ surja de una mutación; $\sigma_0^2(s)$ denota la varianza de distribución de una mutación $\hat{s'}$ proveniente de un individuo con característica $\hat{s}$; $\partial_1 f(\hat{s}, \hat{s}$ representa los parametros de intereacción entre individuos con característica $\hat{s}$ y $\hat{s'}$ dado por la natalidad y mortandad.}\\
+
+            \normalsize{\citep{calvez2020} En el límite donde la tasa de mutación \( \mu \) es pequeña, las densidades de población tienden a concentrarse alrededor de valores particulares de \( x \), representando adaptaciones específicas. Este comportamiento puede analizarse mediante un ansatz de la forma:}
+
+            \begin{equation*}
+                u(x, t) \sim e^{\varphi(x, t)/\mu}
+            \end{equation*}
+                
+            \normalsize{donde $\varphi(x,t)$ representa el frente de expansión. Sustituyendo este ansatz en la ecuación de selección-mutación y tomando el límite asintótico, se obtiene la ecuación de Hamilton-Jacobi para \( \varphi(x, t) \):}
+
+            \begin{equation*}
+                \partial_t \varphi(t, x)+H\left(I(t), x, d_x \varphi(t, x)\right)=0
+            \end{equation*}
+            
+            }
+
+
+    
