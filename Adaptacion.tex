@@ -39,24 +39,124 @@
 
             \normalsize{En los sistemas ecológicos y biológicos, la adaptación y evolución son procesos fundamentales que determinan la dinámica y supervivencia de las poblaciones. La capacidad de las especies para adaptarse a cambios en su entorno a través de la selección natural, la mutación y la competencia es un tema central en biología teórica. Para modelar estos procesos, las ecuaciones de Hamilton-Jacobi (H-J) han emergido como herramientas matemáticas poderosas para describir la evolución de poblaciones bajo distintos escenarios ecológicos.}\\
 
-            \normalsize{\citep{Nicolas} La ecuación de Hamilton-Jacobi encuentra su aplicación en sistemas donde la dinámica de selección-mutación desempeña un papel clave. En este contexto, el cambio en el tiempo del valor de una cierta característica $\hat{s}$ en una población monomórfica, se da por medio de una ecuación de selección-mutación:}
+    \normalsize{\citep{Mirrahimi}El ejemplo mas simple para un modelo matemático autocontenido para la evolución adaptativa es el quimiostato. Microorganismos caracterizados por un parámetro $x$} viven en un bao que contiene un nutriente continuamente renovado a una tasa $d>0$. Esta concentración se denota por $S(t)\geq0$ (para el sustrato), y el nutriente fresco se denota por $S(t)_{in}\geq0$. La densidad de población del microorganismo es $n(x,t)$, y la tada de absorción para los individuos con rasgo $x$ es $\eta(x)>0$. Dando así las ecuaciónes:\\
 
             \begin{equation*}
-                \frac{d \hat{s}}{d t}=\mu(\hat{s}) \frac{\sigma_0^2(\hat{s})}{2} n(\hat{s}) \partial_1 f(\hat{s}, \hat{s})
-            \end{equation*}
+                \left\{\begin{array}{l}
+                \frac{d S(t)}{d t}=d\left(S_{i n}-S(t)\right)-S(t) \int_{-\infty}^{\infty} \eta(x) n(x, t) d x, \\
+                \frac{\partial n(x, t)}{\partial t}=-d n(x, t)+(1-\mu) S(t) \eta(x) n(x, t)+\mu S(t) \int_{-\infty}^{\infty} M(y, x) \eta(y) n(y, t) d y
+                \end{array}\right.
+            \end{equation*}\\
 
-            \normalsize{donde $\mu(s)$ es la probabilidad de que un nacimiento de un individuo con una característica $\hat{s}$ surja de una mutación; $\sigma_0^2(s)$ denota la varianza de distribución de una mutación $\hat{s'}$ proveniente de un individuo con característica $\hat{s}$; $\partial_1 f(\hat{s}, \hat{s}$ representa los parametros de intereacción entre individuos con característica $\hat{s}$ y $\hat{s'}$ dado por la natalidad y mortandad.}\\
+    \normalsize{Los dos primeros principios mencionados en la teoría de Darwin están directamente incluidos en el modelo: el crecimiento de la población proviene de la ecuación de $n(x, t)$, y la competencia proviene de la cantidad limitada de nutrientes. Suponemos que inicialmente $S(0) \leq S_{i n}$, por lo que a lo largo de la dinámica $S(t) \leq S_{i n}$, ya que $S(t)$ disminuye si alcanza $S_{i n}$. El término (1$\mu) \eta(x) n(x, t)$ representa la tasa de nacimiento sin mutaciones. El parámetro $0<\mu<1$ representa la proporción de nacimientos que sufren mutaciones.
+    
+    Las mutaciones están representadas por la probabilidad $M(y, x)$ de que un recién nacido tenga el rasgo $x$ cuando su progenitor tiene el rasgo $y$. Suponemos que $M(y, x) \geq 0$ y $\int_{-\infty}^{\infty} M(y, x) d x=1$}
 
-            \normalsize{\citep{Calves} En el límite donde la tasa de mutación \( \mu \) es pequeña, las densidades de población tienden a concentrarse alrededor de valores particulares de \( x \), representando adaptaciones específicas. Este comportamiento puede analizarse mediante un ansatz de la forma:}
+    Este modelo se puede simplificar suponiendo que los nutrientes llegan rápidamente a un estado de equilibrio en comparación con la escala temporal de la evolución de la población. Esto se logra reemplazando la ecuación diferencial para $S(t)$ por:
 
-            \begin{equation*}
-                u(x, t) \sim e^{\varphi(x, t)/\mu}
-            \end{equation*}
-                
-            \normalsize{donde $\varphi(x,t)$ representa el frente de expansión. Sustituyendo este ansatz en la ecuación de selección-mutación y tomando el límite asintótico, se obtiene la ecuación de Hamilton-Jacobi para \( \varphi(x, t) \):}
+    \begin{equation*}
+        S(t)=\frac{d S_{\text {in }}}{d+\int_{-\infty}^{\infty} \eta(x) n(x, t) d x} .
+    \end{equation*}
 
-            \begin{equation*}
-                \partial_t \varphi(t, x)+H\left(I(t), x, d_x \varphi(t, x)\right)=0
-            \end{equation*}
-            
-            }
+    a su vez, reemplazamos el término de mutación por una ecuación de mutación-difusión:
+
+    \begin{equation*}
+        \frac{\partial n(x, t)}{\partial t}=-d n(x, t)+S(t) \eta(x) n(x, t)+\lambda \Delta n(x, t) .
+    \end{equation*}
+
+    Con ello podemos construir un sistema de ecuaciones mas generales que pueden considerar tasas de crecimiento con/sin muerte $R(x,I(t)$:
+
+    \begin{equation*}
+        \left\{\begin{array}{l}
+        \frac{\partial n(x, t)}{\partial t}=n(x, t) R(x, I(t))+\lambda \Delta n(x, t), \quad x \in \mathbb{R}, t>0 \\
+        I(t)=\int_{-\infty}^{\infty} \eta(x) n(x, t) d x
+        \end{array}\right
+    \end{equation*}
+
+     donde:
+
+     \begin{equation*}
+         R(x,I)=-d+\frac{dS_{in}}{d+I}\eta(x)
+     \end{equation*}\\
+
+    \normalsize{\citep{Mirrahimi}Tales modelos parabólicos no pueden exhibir altas concentraciones mientras el coefiente e difusión $\mu>0$} este fijo. Para ello, reescalamos el problema fijando un $\lambda=\varepsilon^2$. Asumiendodd que la tasa de mutación es pequeña, considerando el paso al límite $\varepsilon \rightarrow 0$, lo cual lleva a la misma exuación con $\lambda=0$, el modelo de selección. Esto es debio a que los efectos de mutación requieren tiempo muy prolongados para observarlos, por consiguiente, cambiamos $t$ por $t/\varepsilon$. Por consiguiente, las ecuaciones se transforman:
+
+    \begin{equation}
+        \left\{\begin{array}{l}
+        \frac{\partial n(x, t)_\varepsilon}{\partial t}=n(x, t)_\varepsilon R(x, I_\varepsilon(t))+ \varepsilon^2 \Delta n(x, t), \quad x \in \mathbb{R}, t>0 \\
+        I_\varepsilon(t)=\int_{-\infty}^{\infty} \eta(x) n_\varepsilon(x, t) d x .
+        \end{array}\right.
+    \end{equation}
+
+    Por otro lado, se puede demostrar bajo las condiciones:
+
+    \begin{equation*}
+        \begin{cases}
+        \sup_{x \in \mathbb{R}} R(x, I_M) = 0, \\
+        \min_{x \in \mathbb{R}} R(x, I_m) = 0, \\
+        \forall I \geq 0, \, R_I(x, I) < 0.
+        \end{cases}
+    \end{equation*}
+
+    \begin{equation*}
+        0< \eta_m \leq \eta(x) \leq \eta_M < \infty
+    \end{equation*}
+
+    Se puede demostrar que si $R$ es monótona en $x$ con datos iniciales "bien preparados", existen dos constantes $\rho_m >0$ y $\rho_M >0$, tales que:
+
+    \begin{equation*}
+        \rho_m \leq \int_{-\infty}^{\infty} n_\varepsilon(x,t) \, dx \leq \rho_M
+    \end{equation*}
+    
+    \normalsize{La demostración del Teorema anterior utiliza el método WKB, común en la propagación de frentes, aplicado en dinámica adaptativa. Este enfoque introduce una nueva ecuación de Hamilton-Jacobi debido a una restricción algebraica. La clave es la transformación de Hopf-Cole:}
+
+    \begin{equation}
+         u_\varepsilon = \varepsilon \ln(n_\varepsilon)
+    \end{equation}
+
+
+    \normalsize{Para esto, los datos iniciales deben estar ``bien preparados'', es decir, concentrados exponencialmente como \( u_0^\varepsilon = \varepsilon \ln(n_0^\varepsilon) \), con \( u_0^\varepsilon \) bien definido cuando \( \varepsilon \to 0 \). Esto lleva a la siguiente ecuación:}
+
+    \begin{equation*}
+        \frac{\partial u_\varepsilon}{\partial t} = R(x, I_\varepsilon(t)) +   \varepsilon \Delta u_\varepsilon + |\nabla u_\varepsilon|^2
+    \end{equation*}
+
+    \normalsize{Se puede demostrar que \( u_\varepsilon \) es uniformemente Lipschitz si \( u_0^\varepsilon \) también lo es, y que \( I_\varepsilon \) tiene variaciones acotadas. Al hacer \( \varepsilon \to 0 \), obtenemos la ecuación de Hamilton-Jacobi restringida:}
+
+
+    \begin{equation*}
+        \begin{cases}
+        \frac{\partial u}{\partial t} = R(x, I(t)) + |\nabla u|^2 \\
+        \max_{x \in \mathbb{R}} u(x, t) = 0, \quad \forall t > 0
+        \end{cases}
+    \end{equation*}
+
+
+    \normalsize{La restricción \( \max_{x \in \mathbb{R}} u(x, t) = 0 \) proviene de la cota uniforme sobre la masa total establecida previamente. La solución \( u(x,t) \) se interpreta como solución de viscosidad.}\\
+
+    \normalsize{\citep{Mirrahimi}En un quimiostato, la competencia entre especies es global y equitativa, pues todos se "alimentan" del único sustrato $S(t)$ introducido. Sin embargo, esto no siempre es el caso, en una situación más realista esta competencia no es equitativa, pues puede ser que un individuo con rasgos más cercanos tengan mayor habilidad de competencia. Para implementar esto, la dinámica población se modela con base a las ecuación tipo Lotka-Volterra:}
+
+    \begin{equation*}
+        \frac{\partial}{\partial t} n(x,t) - \lambda \frac{\partial^2}{\partial x^2} n(x,t) = n(x,t) \left( R(x) - (K * n)(x,t) \right), \quad t \geq 0, \, x \in \mathbb{R}
+    \end{equation*}
+
+    con la condicion inicial $n(x,t=0)=n_0(x)$
+
+    Cuyos elementos tienen la siguiente interpretación:
+
+    \begin{itemize}
+     \item \( n(x,t) \): densidad de población en la posición \( x \) y en el tiempo \( t \),
+     \item \( R(x) > 0 \): tasa de crecimiento intrínseca de los individuos con el rasgo \( x \) (si están aislados y sin competencia),
+     \item \( K \in L^\infty(\mathbb{R}) \): núcleo de competencia, una densidad de probabilidad tal que \( K \geq 0 \) y 
+     \[
+        \int_{-\infty}^{\infty} K(z) \, dz = 1,
+     \]
+     \item La convolución 
+     \[
+     (K * n)(x,t) = \int_{-\infty}^{\infty} K(x - y) n(y,t) \, dy
+     \]
+     representa la competencia por recursos,
+     \item \( \lambda \): tasa de mutación, asumida constante.
+    \end{itemize}
+
+}
