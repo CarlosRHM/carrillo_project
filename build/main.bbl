@@ -1,0 +1,32 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barles and Perthame(2007)]{barles2007}
+G.~Barles and B.~Perthame.
+\newblock Concentrations and constrained hamilton-jacobi equations arising in
+  adaptive dynamics.
+\newblock \emph{Contemporary Mathematics}, 439:\penalty0 57--68, 2007.
+
+\bibitem[Bioenciclopedia(2022)]{evolucion}
+Bioenciclopedia.
+\newblock La evolución, 2022.
+\newblock URL \url{https://www.bioenciclopedia.com/la-evolucion-750.html}.
+
+\bibitem[Mirrahimi et~al.(2011)Mirrahimi, Perthame, Bouin, and
+  Millien]{Mirrahimi2011}
+S.~Mirrahimi, B.~Perthame, E.~Bouin, and P.~Millien.
+\newblock Population formulation of adaptive meso-evolution: theory and
+  numerics.
+\newblock \emph{The Mathematics of Darwin's Legacy}, pages 159--174, 2011.
+\newblock \doi{10.1007/978-3-0348-0122-5_9}.
+
+\bibitem[Osteicoechea(2024)]{adaptacion}
+Alí Osteicoechea.
+\newblock Definición de adaptación, 2024.
+\newblock URL \url{https://conceptodefinicion.de/adaptacion/}.
+
+\end{thebibliography}

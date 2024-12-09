@@ -1,0 +1,64 @@
+\subsection{Descripción del Método numérico}
+\subsubsection{Diferencias finitas}
+
+Es un método numérico para la solución de ecuaciones diferenciales, se basa en la discretización de las variables dependientes e independientes convirtiendo las ecuaciones continuas en sistemas algebraicos más fáciles de resolver.
+
+Es una técnica útil para la solución de sistemas complejos. Consiste en aproximar las derivadas de las ecuaciones mediante \textbf{diferencias finitas}, esto es, que se reemplaza la derivada de una función en términos continuos por una expresión algebraica que involucra a la función en puntos discretos en una malla de tiempo, espacio, etc.
+
+\textbf{{Cómo funciona el Método de Diferencias Finitas}}
+\begin{enumerate}
+	\item Discretización.
+
+	      Se discretizan las variables independientes en una malla, y las soluciones se calculan en algún punto de la malla
+
+	\item Aproximación de Derivadas
+
+	      Las derivadas de las funciones se reemplazan por diferencias finitas en cada punto de la malla. Este reemplazo se hace dependiendo del problema
+
+	\item Ecuaciones algebraicas
+
+	      Al reemplazar las derivadas por diferencias finitas, se obtienen ecuaciones algebraicas fáciles de resolver
+
+	\item Iteración
+
+	      El sistema de ecuaciones se resuelve de manera iterativa, los valores de la solución en cada punto de la malla se calculan por pasos hasta obtener una solución en todo el dominio
+\end{enumerate}
+
+Este método presenta algunas ventajas y desventajas: simplicidad ya que es fácil de implementar, aplicación, es aplicable a problemas de difusión, reacción, etc. Por otro lado, tiene como inconveniente que: el error es inversamente proporcional al tamaño de la malla, pero si se hace la malla más pequeña, tiene más costo computacional, si los pasos temporales son grandes, esto puede ocasionar que la solución no sea estable\footnote{Que el método sea inestable se refiere a que el error en la solución crece conforme el tiempo}.
+
+\subsubsection{Diferencias finitas Semi-Implicito}
+
+Se usa para la solución de sistemas de ecuaciones diferenciales en los que aparecen fenómenos de difusión y reacción. Es un método que involucra la solución combinando dos métodos explicito e implícito, y el método es estable.
+
+\textbf{Explicito:} las variables en el paso de tiempo se calculan en el paso actual con la información del paso anterior, este es inestable en algunas ecuaciones.
+
+\textbf{Implícito:} las variables en el paso de tiempo se calculan en el siguiente paso, este es más costoso computacionalmente, pero es más estable
+
+\subsection{Aplicación a la ecuación de Selección-Mutación}
+\subsubsection{Simulación directa}
+
+La ecuación de Selección-Mutación \eqref{eq:S-M} de forma discreta es
+\begin{equation}
+	\left\{\begin{matrix}
+		S_{i}^{(k+1)} = & S_{i}^{0}-\Delta tS_{i}^{(k+1)}[1+\langle{n^{(k)}\eta_{i}}\rangle  ]                                        \\
+		n_{j}^{(k+1)} = & n_{j}^{(k)}-\Delta t n_{j}^{(k+1)}+\Delta t([S_{1}^{(k+1)}\eta+S_{2}^{(k+1)}\xi]n^{(k)}\star \tilde{K})_{j}
+	\end{matrix}\right.
+	\label{eq:S-M_dis}
+\end{equation}
+
+donde
+\begin{equation*}
+	\langle{n^{(k)}\eta_{i}}\rangle = \frac{1}{N}\sum_{j=1}^{N}n_{j}^{(k)}\eta_{j}
+\end{equation*}
+
+\begin{equation*}
+	(\eta n^{(k)}\star \tilde{K})_{j}=\frac{1}{2M+1}\sum_{m=-M}^{M}\eta_{j-m}n_{j-m}^{(k)}\tilde{K}_{M}
+\end{equation*}
+
+el primer término de la \eqref{eq:S-M_dis} representa la dinámica de los nutrientes, el segundo término se refiere a la dinámica de los consumidores, $\langle{n^{(k)}\eta_{i}}\rangle$ es el promedio de la densidad de consumidores por su capacidad de consumir uno de los nutrientes, y $(\eta n^{(k)}\star \tilde{K})_{j}$ es la operación de convolución, este modula las interacciones de los consumidores en el espacio discreto del rasgo $x$, $y$
+
+\subsubsection{Aproximación Hamilton-Jacobi}
+
+La aproximación de Hamilton-Jacobi 
+
+

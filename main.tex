@@ -1,300 +1,76 @@
-%%%%========== TIPO DE DOCUMENTO ==========%%%%
 \documentclass[letterpaper]{article}
 
-%%%%========== IMPORTAMOS LAS PAQUETERIAS ==========%%%%
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{amssymb}
-\usepackage{physics}
-\usepackage{amsmath}
-\usepackage{anysize}
-\usepackage{multicol} 
-\usepackage{graphicx}                      
-\usepackage{blindtext}                                          
-\usepackage{cancel}
-\usepackage{tikz}
-\usepackage[square,authoryear]{natbib}
-
-\usepackage{hyperref}
- \hypersetup{ colorlinks = true, linkcolor = black } %==== Hipervínculos ====%
+%%%% ========== PAQUETES NECESARIOS ========== %%%%
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage[dvipsnames]{xcolor} % Colores extendidos
+\usepackage{amsmath, amssymb, physics} % Matemáticas avanzadas
+\usepackage{graphicx} % Insertar imágenes
+\usepackage{multicol} % Múltiples columnas
+\usepackage{tikz} % Dibujos vectoriales
+\usepackage{fancyhdr} % Encabezados y pies de página
+\usepackage[colorlinks=true, linkcolor=black,citecolor=black, urlcolor=black]{hyperref} % Hipervínculos
+\usepackage[square,authoryear]{natbib} % Citas y bibliografía
+%%%% ========== CONFIGURACIÓN DE MÁRGENES ========== %%%%
 \usepackage{geometry}
-\newgeometry{ bottom = 2.54cm, top = 2.54cm, left = 2.54cm, right = 2.54cm } %==== Modificación de Márgenes ====%
+\geometry{bottom=2.54cm, top=2.54cm, left=2.54cm, right=2.54cm}
 
-\usepackage{fancyhdr}  
+%%%% ========== ENCABEZADOS Y PIES DE PÁGINA ========== %%%%
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{Mecánica Clásica}
 \fancyhead[L]{\thepage}
-\renewcommand{\headrulewidth}{0.08pt} %==== Encabezados ====%
-
-\renewcommand{\footrulewidth}{0.08pt} %==== Pie de Página ====%
+\renewcommand{\headrulewidth}{0.08pt}
+\renewcommand{\footrulewidth}{0.08pt}
 \fancyfoot[L]{}
 \fancyfoot[R]{\rightmark}
 
-%\usepackage[pages=all]{background} 
-%\backgroundsetup{ scale=1, color=black, opacity=0.15, angle=0,
- %   contents={ \includegraphics{logo_ifuap.png} }
-%}
+%%%% ========== COMANDOS PERSONALIZADOS ========== %%%%
+\newcommand{\Title}[1]{\begin{center}\LARGE\textbf{\textit{#1}}\end{center}}
+\newcommand{\Abstract}[1]{\begin{abstract}\normalsize{#1}\end{abstract}}
+\newcommand{\Theorem}[1]{\begin{center}\normalsize\textit{#1}\end{center}}
 
-\setcounter{tocdepth}{3}
+% Colores personalizados
+\newcommand{\blue}{\color{blue}}
+\newcommand{\red}{\color{red}}
+\newcommand{\green}{\color{OliveGreen}}
+\newcommand{\orange}{\color{orange}}
 
-\newcommand{\Title}[1]{\begin{center} \LARGE{\textbf{\textit{#1}}} \end{center}}
-\newcommand{\Abstract}[1]{\begin{abstract} \normalsize{#1} \end{abstract}}
-\newcommand{\Theorem}[1]{\begin{center} \normalsize{\textit{#1}} \end{center}}
-
-\newcommand{\blue}  { \color{blue} }
-\newcommand{\red}   { \color{red} }
-\newcommand{\green} { \color{OliveGreen} }
-\newcommand{\orange}{ \color{orange} }
-
-\newcommand{\deq}{:=}
-\newcommand{\less}{<}
-\newcommand{\grow}{>}
-
+% Atajos matemáticos
 \newcommand{\Identity}{\mathbb{I}}
 \newcommand{\Reals}{\mathbb{R}}
 \newcommand{\Naturals}{\mathbb{N}}
 \newcommand{\Integers}{\mathbb{Z}}
 \newcommand{\Complex}{\mathbb{C}}
-\newcommand{\Imaginaries}{\mathbb{I}}
 
-\newcommand{\Lag}{\mathcal{L}}
-\newcommand{\Ham}{\mathcal{H}}
+% Operadores matemáticos
+\newcommand{\Grad}{\vec{\nabla}}
+\newcommand{\Divg}{\vec{\nabla} \cdot}
+\newcommand{\Curl}{\vec{\nabla} \times}
+\newcommand{\Lapl}{\nabla^{2}}
 
-\newcommand{\cbk}[1]{ \left( #1 \right) }
-\newcommand{\sbk}[1]{ \left[ #1 \right] }
-\newcommand{\kbk}[1]{ \left\{ #1 \right\} }
-\newcommand{\tbk}[1]{ \langle #1 \rangle }
+% Derivadas y operadores
+\newcommand{\Partial}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\SecPartial}[3]{\frac{\partial^{2}#1}{\partial#2\partial#3}}
 
-\newcommand{\Grad}{ \vec{\nabla} }
-\newcommand{\Divg}{ \vec{\nabla} \cdot }
-\newcommand{\Curl}{ \vec{\nabla} \times }
-\newcommand{\Lapl}{ \nabla^{2} }
-
-\newcommand{\rad}[1]{ \vec{r}_{#1} }
-
-\newcommand{\define}[3]{ \left. #1 \right|_{#2}^{#3} }
-\newcommand{\Sum}[3]{ \sum_{#1=#2}^{#3} }
-\newcommand{\Tensor}[3]{ #1^{#2}_{#3} }
-
-\newcommand{\Partial}[2]{ \frac{\partial#1}{\partial#2} }
-\newcommand{\SecPartial}[3]{ \frac{\partial^{2}#1}{\partial#2\partial#3} }
-
-\newcommand{\eqLagrange}[1]{ \frac{d}{dt}\cbk{\Partial[\dot{#1}]{\Lag}} - \Partial[#1]{\Lag} = 0 }
-
-\newcommand{\eqHamilton}[2]{ \Partial[#1_{i}]{\Ham} = - \dot{#2}_{i}, ~ ~ \Partial[#2_{i}]{\Ham} = \dot{#1}_{i} }
+% Ecuaciones de movimiento
+\newcommand{\eqLagrange}[1]{\frac{d}{dt}\cbk{\Partial[\dot{#1}]{\Lag}} - \Partial[#1]{\Lag} = 0}
+\newcommand{\eqHamilton}[2]{\Partial[#1_{i}]{\Ham} = - \dot{#2}_{i}, \quad \Partial[#2_{i}]{\Ham} = \dot{#1}_{i}}
 
 \begin{document}
 
 \Title{Dinámica de la Adaptación}
+\input{00_abstract.tex}
 
-    \Abstract{El presente trabajo constituye el proyeccto final del curso de \textit{Mecánica Clásica} del primer semestre del programa de \textit{Maestría en Física} del \textit{Instituto de Física de la Universidad Autónoma de Puebla}. En el mismo se trata el tema de \textit{dinámica adaptativa}.}
+\tableofcontents
+\clearpage
 
-    \tableofcontents
+\input{01_que_es_la_dinamica_adaptativa.tex}
+\input{02_conceptos_preliminares.tex}
+\input{03_modelo.tex}
 
-    \clearpage
 
-    \input{Adaptacion}
 
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    \section{Conceptos Preliminares}{
-
-        \subsection{Acervo Genético, y Poblaciones Monomórficas y Dimórficas.}{
-
-            \normalsize{La \textit{reserva genética} o \textit{acervo genético} de una población se define como los alelos\footnote{Un alelo es una de las versiones de una secuencia de ADN que se encuentra en una posición determinada de un cromosoma} de los genes encontrador en los individuos. Cada gen, a su vez, puede contar con su propio acervo genético, el cuál es constituido por lo alelos del mismo. Un ejemplo de esto es una población en la que cada individuo puede ser considerado como un ser único desde el punto de vista genético. Para cada alelo podríamos determinar la frecuencia de aparición, cantidad a la que llamamos frecuencia génica, y esta puede ser expresada como un porcentaje y representa la abundancioa del alelo en realción a las otras versiones del su correspondiente gen. Supongamos una población con distintos tipos de alelos del gen $A$, digamos $A$y $A'$, el caso de ser sólo dos. Si esta población cuenta con 100 individuos, estos existen 200 alelos. Suponiendo que aparecen 120 alelos $A$ y 80 alelos $A'$, entonces las frecuencias génicas son 60\% y 40\% respectivamente [2].}\\
-
-            \normalsize{Bajo este entendido, decimos que una población es genéticamente estable, o está en equilibrio genético, cuándo el acervo genético se mantiene constante en el tiempo. Si por el contrario, el acervo cambia de una generación a otra, la población está en \textit{trance evolutivo}. Así pues, las poblaciones genéticamente establces son una hipótesis. Estas fueros descritas por Hardy y Weinberg en 1908, quienes postularon que para que esto se cumpla, deben mantenerse las siguientes condiciones [2]:}
-
-            \begin{itemize}
-                \item {
-
-                    \normalsize{La población deber ser muy grande, tal que un cambio fortuito no tenga impacto en su composición genética.}
-                
-                }
-
-                \item {
-
-                    \normalsize{El apareamiento debe ser al azar, esto con motivo de que no haya \textit{favoritismo} hacia ciertas características, que son las que serán heredadas.}
-                
-                }
-
-                \item {
-
-                    \normalsize{No debe haber mutaciones para que el acervo genético no cambie.}
-                
-                }
-
-                \item {
-
-                    \normalsize{No debe haber selección natural, por lo que todos los genotipos\footnote{El genotipo es el conjunto de genes y la información genética que caracteriza a un individuo, y que se transmite de generación en generación} están en igualdad de condiciones con respecto a la reproducción y a la adaptación ambiental.}
-                
-                }
-
-                \item {
-
-                    \normalsize{No debe haber migraciones, es decir, no debe haber flujo genético ni hacia dentro ni hacia afuera de la población.}
-                
-                }
-            \end{itemize}
-
-            \normalsize{No es difícil deducir qué condiciones deben darse para que la población entre en trance evolutivo.}
-
-            \begin{itemize}
-                \item {
-
-                    \normalsize{Poblaciones pequeñas.}
-                
-                }
-
-                \item {
-
-                    \normalsize{Apareamiento selectivo.}
-                
-                }
-
-                \item {
-
-                    \normalsize{Presencia de mutaciones.}
-                
-                }
-
-                \item {
-
-                    \normalsize{Selección natural.}
-                
-                }
-                
-                \item {
-
-                    \normalsize{Migraciones, tanto internas como externas.}
-                
-                }
-            \end{itemize}
-
-            \normalsize{Puestos en este contexto podemos definir a las poblaciones monomórficas y dimórficas.}\\
-
-            \normalsize{\textbf{Población Monomórfica:} decimos que una población es monomórfica cuando ésta presenta un sólo alelo para un gen específico. En este contexto decimos que todos los individuos son genéticamente identicos respecto a dicho gen.}\\
-
-            \normalsize{\textbf{Población Dimórfica:} decimos que una problación es dimórfica cuando ésta presenta dos variaciones, o alelos en un gen específico.}\\
-
-            \normalsize{Estas ideas pueden generalizarse a poblaciones polimórficas, siendo éstas aquellas que presentan un dos o más variaciones, o alelos, de un gen en partícular, pero a efectos de este trabajo, sólo nos resultarán de interés las monomórficas, y las dimórficas.}
-        
-        }
-
-        \subsection{\textit{Chemostat}}{
-
-            \normalsize{El \textit{chemostat} o \textit{quimistato} es un disposotivo de laboratorio que está diseñado para el estudio del crecimiento de microorganismos en un ambiente controlado, en un medio líquido. Este dispositivo funciona de la siguiente forma: a un recipiento de vidrio cerrado, de entre 1 mL y unos pocos litros, se le suministra un medio fresco a través de una bomba de afluente. Para mantener un volumen constante, una segunda bomba extrae el líquido a la misma velocidad. Los microorganismos que han sido añadidos al recipiente únicamente pueden alimentarse del la bomba de afluente, y la tasa de crecimiento de esta está definida como la relación entre la tasa de afluente y el volumen del recipiente. Entre los sustratos y factores de crecimiento añadidos al medio, uno es el llamado sustrato de control, que limita el crecimiento [1].}
-
-            \begin{center}
-                \includegraphics[scale=0.2]{Chemostat.jpg}
-            \end{center}
-
-            \normalsize{Un quimiostato es una buena opción para el cultivo de microorganismos, ya que establecemos condiciones que permanecen constantes, contra los cultivos hechos en lotes. Esto facilita enormemente la reproducción de los experimentos. Algunas de las utilidades del quimiostato son que puede ser utilizado en cultivos puros para el estudio de la cinética del crecimiento microbiano, o para enfoques ómicos más detallados. También se puede utilizar para experimentos de competición [1].}\\
-            
-            \normalsize{En estos experimentos se liberan en el recipiente dos o tres microorganismos diferentes, con nichos comparables en condiciones variables; con tasas de crecimiento altas o bajas; con concentraciones de oxígeno altas o bajas; distintos valores de pH o temperatura; con o sin factores de crecimiento, etc [1].}
-
-            \subsubsection{GREENT}{
-
-                \normalsize{La  actividad humana ha tenido serios impactos en los ciclos biológicos del carbono y nitrógeno, y como consecuencia, el calentamiento global y la contaminación del agua. En este contexto, las tecnologías relacionadas con el tratamiento de agua ha mejorado en las últimas décadas. En particular, el uso de anammox (bacterias anaeróbicas oxidantes de amonio) en gránulos con oxígeno tiene el potencial de convertir las tratadoras de agua en sistemas energéticamnete eficientes con mínima emisión de gases de efecto invernadero [1].}\\
-
-                \normalsize{Existen microorganismos que acoplan la oxidación anaeróbica del metano con la desnitrificación. Una integración innovadora de estos en determinados sistemas de tratamiento de aguas podría ofrecer una solución elegante y eficiente para combatir las emisiones de gases de efecto invernadero de las mismas [1].}\\
-                
-                \normalsize{El propósito del \textit{GREENT}, o \textit{Mitigación de Gases de Efecto Invernadero Mediante Tecnología Avanzada de Eliminación de Nitrógeno} (por sus siglas en inglés) es determinar las emisiones de óxido nitroso en los bioreactores de nitritación parcial-anammox, y los parámetros que las gobiernan, e investigar las vías responsables con un detalle molecular. Aunado a ésto, también explorar la viabilidad de un bioreactor que elimine el amonio y metano de manera simultanea mediante anammox, y microorganismos anaeróbicos oxidantes de metano [1].}
-            
-            }
-        
-        }
-
-        \subsection{Ecuación de Hamilton-Jacobi, Viscosidad y Constricciones.}
-    
-    }
-
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    \section{Modelo}
-    \input{Modelo}
-
-    
-
-        
-        \subsection{Descripción Superficial del Modelo Numérico.}
-          \input{metodo_numerico}
-
-
-%%_________________________________________________________________________________________________________________________________________________________%%
-    }
-
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    \section{Ejemplos}{
-
-        \subsection{Tumores}
-
-        \subsection{Osos-Salmones}
-    
-    }
-
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    \section{Conclusiones y Comentarios Finales}
-
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    \section{Apéndices}
-
-    \vspace{0.2cm}
-        \rule{150mm}{0.5mm} %%%%----- -----%%%%
-    \vspace{0.2cm}
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%% call al archivo de bibliografia
-    	\bibliographystyle{plain}
-     \bibliography{referencias.bib}
-%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Bibliografías}
-
-    \begin{enumerate}
-        \item {
-
-            \normalsize{Chemostat. (s.f.). Max Planck Institute For Marine Microbiology. Recuperado 21 de noviembre de 2024, de https://www.mpi-bremen.de/en/Chemostat.html}
-
-        }
-
-        \item {
-
-            \normalsize{Monge-Nájera, J. (2002). Biología general. EUNED. ISBN 9789968311892. Consultado el 25 de noviembre de 2024.}
-        
-        }
-
-        \item{
-            \normalsize{Calvez, V., Lam, K.-Y. (2020) . Uniqueness of the viscosity solution of a constrained Hamilton–Jacobi equation. SPRINGER, 1-2. https://doi.org/10.1007/s00526-020-01819-0} 
-        }
-
-        \item {
-            \normalsize{Barles, G., Perthame, B. (2007). Concentrations and constrained Hamilton-Jacobi equations arising in adaptive dynamics. Contemporary Mathematics, 439, 57-68.}
-        }
-
-        \item{
-            \normalsize{Mirrahimi, S., Perthame, B., Bouin, E., Millien, P. (2011). Population formulation of adaptative meso-evolution: theory and numerics. The mathematics of Darwin’s legacy, 159-174.}
-        }
-
-        \item{
-            \normalsize{De la Calleja, E. M., Carrillo, J. L., Santamaría-Holek, I. (2016). Bragg-Williams approximation for the dynamics of prey-predator biological associations. arXiv preprint arXiv:1603.03608.}
-        }
-    \end{enumerate}
-
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-
+\bibliographystyle{plainnat}
+\bibliography{ref}
 \end{document}
