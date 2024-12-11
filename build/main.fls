@@ -1,7 +1,7 @@
-PWD d:\Users\carlo\Desktop\Da\carrillo_project
+PWD d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project
 INPUT C:\Users\carlo\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\main.tex
-OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.log
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\main.tex
+OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.log
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
@@ -237,10 +237,12 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.aux
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.aux
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.aux
-OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.aux
+INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.aux
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.aux
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.aux
+OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.aux
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -250,14 +252,14 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-s
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.pdf
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.pdf
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
@@ -269,9 +271,9 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx9.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.toc
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.toc
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.toc
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -287,7 +289,7 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.toc
+OUTPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
 INPUT C:\Users\carlo\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\01_que_es_la_dinamica_adaptativa.tex
 INPUT .\01_que_es_la_dinamica_adaptativa.tex
@@ -297,6 +299,22 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tf
 INPUT .\02_conceptos_preliminares.tex
 INPUT .\02_conceptos_preliminares.tex
 INPUT 02_conceptos_preliminares.tex
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\Chemostat.jpg
+INPUT .\02.02_ecuacion_HJ.tex
+INPUT .\02.02_ecuacion_HJ.tex
+INPUT 02.02_ecuacion_HJ.tex
+INPUT .\03_modelo.tex
+INPUT .\03_modelo.tex
+INPUT 03_modelo.tex
+INPUT .\03.03_metodo_numerico.tex
+INPUT .\03.03_metodo_numerico.tex
+INPUT 03.03_metodo_numerico.tex
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
@@ -309,27 +327,30 @@ INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\Chemostat.jpg
-INPUT .\03_modelo.tex
-INPUT .\03_modelo.tex
-INPUT 03_modelo.tex
-INPUT .\03.03_metodo_numerico.tex
-INPUT .\03.03_metodo_numerico.tex
-INPUT 03.03_metodo_numerico.tex
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.bbl
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.bbl
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.bbl
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\image.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\Captura de pantalla 2024-12-11 095132.png
+INPUT .\04_consclusiones.tex
+INPUT .\04_consclusiones.tex
+INPUT 04_consclusiones.tex
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.bbl
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.bbl
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.bbl
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.aux
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.aux
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.out
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

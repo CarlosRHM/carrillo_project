@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,51 @@ Bioenciclopedia.
 \newblock La evolución, 2022.
 \newblock URL \url{https://www.bioenciclopedia.com/la-evolucion-750.html}.
 
+\bibitem[Bremen(n.d.)]{chemostat}
+MPI Bremen.
+\newblock Chemostat, n.d.
+\newblock URL \url{https://www.mpi-bremen.de/en/Chemostat.html}.
+\newblock Accessed: 2024-11-21.
+
+\bibitem[C.(2022)]{evans}
+Evans{,}~Lawrence C.
+\newblock \emph{Partial differential equations}, volume~19.
+\newblock American Mathematical Society, 2022.
+
+\bibitem[Diekmann et~al.(2001)Diekmann, Gyllenberg, Huang, Kirkilionis, Metz,
+  and Thieme]{Diekmann2001}
+O.~Diekmann, M.~Gyllenberg, H.~Huang, M.~Kirkilionis, J.~A.~J. Metz, and H.~R.
+  Thieme.
+\newblock On the formulation and analysis of general deterministic structured
+  population models ii. nonlinear theory.
+\newblock \emph{Journal of Mathematical Biology}, 43\penalty0 (2):\penalty0
+  157--189, 2001.
+\newblock \doi{10.1007/s002850170002}.
+
+\bibitem[Diekmann et~al.(2003)Diekmann, Gyllenberg, and Metz]{diekman2003}
+O.~Diekmann, M.~Gyllenberg, and J.A.J. Metz.
+\newblock Steady-state analysis of structured population models.
+\newblock \emph{Theoretical Population Biology}, 63\penalty0 (4):\penalty0
+  309--338, 2003.
+\newblock \doi{10.1016/S0040-5809(02)00058-8}.
+
+\bibitem[Diekmann et~al.(2005)Diekmann, Jabin, Mischler, and
+  Perthame]{dieckman2005}
+Odo Diekmann, Pierre-Emanuel Jabin, Stéphane Mischler, and Benoît Perthame.
+\newblock The dynamics of adaptation: An illuminating example and a
+  hamilton–jacobi approach.
+\newblock \emph{Theoretical Population Biology}, 67\penalty0 (4):\penalty0
+  257--271, 2005.
+\newblock \doi{10.1016/j.tpb.2004.12.003}.
+
+\bibitem[Ledesma et~al.(2015)Ledesma, Rosas, and
+  Bernal]{ledesma2015introduccion}
+Antonio~Carrillo Ledesma, Karla Ivonne~Gonz{\'a}lez Rosas, and Omar~Mendoza
+  Bernal.
+\newblock Introducci{\'o}n al m{\'e}todo de diferencias finitas y su
+  implementaci{\'o}n computacional.
+\newblock \emph{Bernal, Facultad de Ciencias, UNAM}, 2015.
+
 \bibitem[Mirrahimi et~al.(2011)Mirrahimi, Perthame, Bouin, and
   Millien]{Mirrahimi2011}
 S.~Mirrahimi, B.~Perthame, E.~Bouin, and P.~Millien.
@@ -23,6 +68,12 @@ S.~Mirrahimi, B.~Perthame, E.~Bouin, and P.~Millien.
   numerics.
 \newblock \emph{The Mathematics of Darwin's Legacy}, pages 159--174, 2011.
 \newblock \doi{10.1007/978-3-0348-0122-5_9}.
+
+\bibitem[Monteiro et~al.(2013)Monteiro, Schettini, and
+  Silvestrini]{Monteiro2024}
+L.~R. Monteiro, E.~B.~C. Schettini, and J.~H. Silvestrini.
+\newblock Semi-implicit finite difference method for free-surface flow
+  numerical simulation, 2013.
 
 \bibitem[Osteicoechea(2024)]{adaptacion}
 Alí Osteicoechea.
