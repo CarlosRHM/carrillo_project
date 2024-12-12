@@ -1,20 +1,21 @@
 # Fdb version 4
-["bibtex build/main"] 1733935950 "build/main.aux" "build/main.bbl" "build/main" 1733935953 0
+["bibtex build/main"] 1733973910 "build/main.aux" "build/main.bbl" "build/main" 1733978932 0
   "./ref.bib" 1733889577 5893 6a7d19279e9fcae7ebd2ed72d760a7d1 ""
   "C:/Users/carlo/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "build/main.aux" 1733935952 6100 94fa24dfd8d7061a3e11568c79978789 "pdflatex"
+  "build/main.aux" 1733978931 6220 3500b5ebf0e01730d952caf521239189 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1733935951 "d:/Users/carlo/Desktop/Da/carrillo_project_02/carrillo_project/main.tex" "build/main.pdf" "main" 1733935953 0
-  "00_abstract.tex" 1733903984 303 77535f380dc758f01fae8f50fe1d72bf ""
-  "01_que_es_la_dinamica_adaptativa.tex" 1733894404 11930 6e492fd8396b64674b3dff80b0d4293e ""
+["pdflatex"] 1733978930 "d:/Users/carlo/Desktop/Da/carrillo_project_02/carrillo_project/main.tex" "build/main.pdf" "main" 1733978932 0
+  "00.5_objetivos.tex" 1733978930 515 1619e3ef6bb33ee69b4b8d702e587d34 ""
+  "00_abstract.tex" 1733969149 344 d55f070c288329f98f7fc7f08be7851a ""
+  "01_que_es_la_dinamica_adaptativa.tex" 1733973907 13857 3fe1398ce4a331a24ae09f17c680a78e ""
   "02.02_ecuacion_HJ.tex" 1733894402 2960 b25fdf3f4036e54e817dded27723865d ""
   "02_conceptos_preliminares.tex" 1733888577 1678 888ef4f38c957de3bd180b99027763b7 ""
-  "03.03_metodo_numerico.tex" 1733935842 11237 1062d0362ae2de9341ba4325eefd9ec0 ""
+  "03.03_metodo_numerico.tex" 1733975572 10889 671b3a932e9e40117ef19abe82a10cbb ""
   "03_modelo.tex" 1733888577 6618 ffdce272da8fe18fe5e4f599e6785802 ""
-  "04_consclusiones.tex" 1733935948 38 e3d36635a8a7fa10c317e33de0a43c57 ""
+  "04_consclusiones.tex" 1733969149 762 e49243f2503432e7a59e4dd22dc82c2f ""
   "C:/Users/carlo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1733706198 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/carlo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717568366 24213230 5a91b27a684121c868ef0bcfcd1d47d5 ""
   "C:/Users/carlo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -196,13 +197,13 @@
   "C:/Users/carlo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "Captura de pantalla 2024-12-11 095132.png" 1733932292 129694 129ace736d6249d619939cb283231dae ""
   "Chemostat.jpg" 1733903984 989366 02e638e694720d14d8efaf045a522def ""
-  "build/main.aux" 1733935952 6100 94fa24dfd8d7061a3e11568c79978789 "pdflatex"
-  "build/main.bbl" 1733935951 3367 24f22333ac62fbb02708f818042deac8 "bibtex build/main"
-  "build/main.out" 1733935952 3778 a0f580be8687fc7e74ed228700b3656b "pdflatex"
-  "build/main.toc" 1733935952 1632 15be78f5f0f009ef9208d0a16a00791f "pdflatex"
-  "d:/Users/carlo/Desktop/Da/carrillo_project_02/carrillo_project/main.tex" 1733935910 2871 0799782814028f805488ce0e0ddc795e ""
+  "build/main.aux" 1733978931 6220 3500b5ebf0e01730d952caf521239189 "pdflatex"
+  "build/main.bbl" 1733973910 3747 1ffbcb16dccdcd11284216f10b848f4f "bibtex build/main"
+  "build/main.out" 1733978931 3778 a0f580be8687fc7e74ed228700b3656b "pdflatex"
+  "build/main.toc" 1733978931 1632 4851f872c4f3332cbb9412c2f6d7119d "pdflatex"
+  "d:/Users/carlo/Desktop/Da/carrillo_project_02/carrillo_project/main.tex" 1733978930 2985 623f7502551fabb0bb61b48d5e586fae ""
   "image.png" 1733932274 112450 83d73310a82229e7ded4c1a8e828b55a ""
-  "main.tex" 1733935910 2871 0799782814028f805488ce0e0ddc795e ""
+  "main.tex" 1733978930 2985 623f7502551fabb0bb61b48d5e586fae ""
   (generated)
   "build/main.aux"
   "build/main.log"

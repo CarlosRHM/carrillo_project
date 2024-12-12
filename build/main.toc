@@ -1,17 +1,17 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}¿Qué es la Dinámica Adaptativa?}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Adaptación y Evolución de los Sistemas Biológicos.}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Motivación para Introducir la Teoría de Hamilton-Jacobi.}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Conceptos Preliminares}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Acervo Genético, y Poblaciones Monomórficas y Dimórficas.}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {1.2}Motivación para Introducir la Teoría de Hamilton-Jacobi.}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Conceptos Preliminares}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Acervo Genético, y Poblaciones Monomórficas y Dimórficas.}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Ecuación de Hamilton-Jacobi.}{6}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Modelo}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Descripción del Entorno Biológico.}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Sistemas de Ecuaciones de Selección-Mutación y Paso al Límite para Mutaciones.}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Modelo}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descripción del Entorno Biológico.}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Sistemas de Ecuaciones de Selección-Mutación y Paso al Límite para Mutaciones.}{9}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Descripción del Método numérico}{10}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Diferencias finitas}{10}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Diferencias finitas Semi-Implicito}{10}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2}Diferencias finitas Semi-Implicito}{11}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Aplicación a la ecuación de Selección-Mutación}{11}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Experimento numérico}{11}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Resultados}{12}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.5}Experimento numérico}{12}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Resultados}{13}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Conclusiones}{14}{section.4}%

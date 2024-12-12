@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -26,6 +26,15 @@ MPI Bremen.
 Evans{,}~Lawrence C.
 \newblock \emph{Partial differential equations}, volume~19.
 \newblock American Mathematical Society, 2022.
+
+\bibitem[Dercole and Rinaldi(2008)]{Dercole}
+Fabio Dercole and Sergio Rinaldi.
+\newblock \emph{Analysis of Evolutionary Processes: The Adaptive Dynamics
+  Approach and Its Applications}.
+\newblock Princeton University Press, Princeton, 2008.
+\newblock ISBN 9781400828340.
+\newblock \doi{10.1515/9781400828340}.
+\newblock URL \url{https://doi.org/10.1515/9781400828340}.
 
 \bibitem[Diekmann et~al.(2001)Diekmann, Gyllenberg, Huang, Kirkilionis, Metz,
   and Thieme]{Diekmann2001}

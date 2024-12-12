@@ -268,13 +268,15 @@ INPUT .\00_abstract.tex
 INPUT 00_abstract.tex
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx9.tfm
-INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT .\00.5_objetivos.tex
+INPUT .\00.5_objetivos.tex
+INPUT 00.5_objetivos.tex
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
-INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
+INPUT d:\Users\carlo\Desktop\Da\carrillo_project_02\carrillo_project\build\main.toc
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -296,6 +298,7 @@ INPUT .\01_que_es_la_dinamica_adaptativa.tex
 INPUT 01_que_es_la_dinamica_adaptativa.tex
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\carlo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\02_conceptos_preliminares.tex
 INPUT .\02_conceptos_preliminares.tex
 INPUT 02_conceptos_preliminares.tex
